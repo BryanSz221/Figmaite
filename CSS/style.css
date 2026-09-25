@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Archivo', system-ui, -apple-system, sans-serif;
+  background-color: #EFEFEF;
+  color: #322153;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.cabecalho {
+  background-color: #121214;
+  padding: 80px 20px 140px;
+  text-align: left;
+}
+
+.conteudo {
+  max-width: 736px;
+  margin: 0 auto;
+}
+
+.cabecalho h1 {
+  color: #FFFFFF !important;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.cabecalho p {
+  color: #00E2FF !important;
+  font-size: 1rem;
+  max-width: 320px;
+  line-height: 1.4;
+}
+
+.formulario {
+  max-width: 736px;
+  margin: -70px auto 80px;
+  padding: 0 20px;
+}
+
+.formulario form {
+  background-color: #FFFFFF;
+  border-radius: 8px 8px 0 0;
+  padding: 64px 64px 0 64px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.formulario h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #322153;
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.formulario h2:first-of-type {
+  margin-top: 0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.campo label {
+  font-size: 0.875rem;
+  color: #4E4958;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.campo label span {
+  font-size: 0.75rem;
+  color: #C1BCCC;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.campo input[type="text"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="date"],
+.campo input[type="time"],
+.campo textarea,
+.campo select {
+  background-color: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  color: #322153;
+  transition: border-color 0.2s, background-color 0.2s;
+  width: 100%;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  border-color: #00C86F;
+  background-color: #FFFFFF;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.campo select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%3E%3Cpath%20fill%3D%22%239C98A6%22%20d%3D%22M1.41%200L6%204.58L10.59%200L12%201.41l-6%206l-6-6z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  cursor: pointer;
+}
+
+.privado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.privado input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #00C86F;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.privado label {
+  font-size: 0.875rem;
+  color: #4E4958;
+  cursor: pointer;
+}
+
+.data-hora {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.formulario button[type="submit"] {
+  width: calc(100% + 128px);
+  margin-left: -64px;
+  background-color: #00C86F;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #00B362;
+}
+
+@media (max-width: 600px) {
+  .formulario form {
+    padding: 32px 24px 0 24px;
+  }
+
+  .data-hora {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario button[type="submit"] {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+  }
+}
